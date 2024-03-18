@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.sportcontact.com</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            background-color: green;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        video {
+            width: 100%;
+        }
+
+        u {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        time {
+            display: block;
+            text-align: center;
+            font-style: italic;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="mainHeading">SPORTCONTACT</h1>
+    <p id="subHeading">For Every Athlete</p>
+    <textarea id="message">Do you want to be a Sponsor or do you want to be Sponsored?!</textarea>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Phonenumber</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add table data here -->
+        </tbody>
+    </table>
+
+    <video id="sportVideo" width="320" height="240" controls>
+        <source src="Sportcontacttype.mp4" type="video/mp4">
+        <source src="Sportcontacttype.ogv" type="video/ogg">
+        <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+        <track src="fgsubtitles_fi.vtt" kind="subtitles" srclang="no" label="Norwegian">
+    </video>
+
+    <u id="helpText">Helps every athlete</u>
+    <time id="dateTime">24/7= 24: 365p x 24: Today 22.11.2023: time: 13:10</time>
+
+    <script>
+        // JavaScript code for manipulation
+        document.getElementById("mainHeading").style.color = "white";
+        document.getElementById("subHeading").style.color = "white";
+        document.getElementById("message").innerHTML = "Updated message content";
+
+        // Add more JavaScript code for your specific needs
+    </script>
+</body>
+
+</html>
+

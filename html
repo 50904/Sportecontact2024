@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locked Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        #lockContainer {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #unlockButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="lockContainer">
+        <h1>This page is locked</h1>
+        <p>Please enter the password to unlock:</p>
+        <input type="password" id="passwordInput" placeholder="Enter password">
+        <button id="unlockButton" onclick="unlockPage()">Unlock</button>
+        <p id="errorMessage" style="color: red; display: none;">Incorrect password. Try again.</p>
+    </div>
+
+    <script>
+        // Replace this with your desired password
+        const correctPassword = "secret";
+
+        function unlockPage() {
+            const passwordInput = document.getElementById("passwordInput");
+            const errorMessage = document.getElementById("errorMessage");
+
+            if (passwordInput.value === correctPassword) {
+                // Unlock the page
+                document.body.innerHTML = "<h1>Page Unlocked!</h1>";
+            } else {
+                // Show error message
+                errorMessage.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>
