@@ -1,15 +1,14 @@
 from django.contrib import admin
-from .models import athletes
-from .models import sponsors
+from .models.athletes import Athlete
+from .models.sponsors import Sponsor
+from .models.sports import Sport
 
 # Register your models here.
 
-admin.site.register(athletes)  # Registering the athletes model
-admin.site.register(sponsors)  # Registering the sponsors model
+admin.site.register(Athlete)  
+admin.site.register(Sponsor)  
+admin.site.register(Sport)
 
-name = admin.py
-sport = admin.py
-country = admin.py
-age = admin.py
 
-admin.site.register('athelets','sponsors')
+
+
