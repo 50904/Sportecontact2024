@@ -1,9 +1,13 @@
-class Athlete:
-    def __init__(self, name, sport, country, age):
-        self.name = name
-        self.sport = sport
-        self.country = country
-        self.age = age
+from django.db import models
+
+from .sports import Sport
+
+class Athlete(models.Model):
+    
+    name = models.CharField(max_lenght=100)
+    sport = models.ForeignKey(Sport)
+    country = models.CharField(max_lenght=100)
+    age = models.IntegerField(max_lenght=100)
 
     def get_details(self):
         return f"Name: {self.name}, Sport: {self.sport}, Country: {self.country}, Age: {self.age}"
