@@ -2,9 +2,9 @@ from django.db import models
 
 class Sponsor(models.Model): 
 
-    name = models.CharField(max_lenght=100)
-    contact_email = models.CharField(max_lenght=100)
-    payment_status = models.CharField(max_lenght=100)
+    name = models.CharField(max_length=100)
+    contact_email = models.CharField(max_length=100)
+    payment_status = models.CharField(max_length=100)
 
     def send_payment_reminder(self):
         # Logic to send a payment reminder to the sponsor
