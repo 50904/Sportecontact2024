@@ -7,7 +7,9 @@ class Athlete(models.Model):
     name = models.CharField(max_length=100)
     sport = models.ForeignKey(Sport, on_delete=models.RESTRICT)
     country = models.CharField(max_length=100)
-    age = models.IntegerField(max_length=100)
+    age = models.IntegerField()
+    def __str__(self):
+        return self.name
 
     def get_details(self):
         return f"Name: {self.name}, Sport: {self.sport}, Country: {self.country}, Age: {self.age}"

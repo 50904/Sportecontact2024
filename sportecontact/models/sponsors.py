@@ -5,7 +5,9 @@ class Sponsor(models.Model):
     name = models.CharField(max_length=100)
     contact_email = models.CharField(max_length=100)
     payment_status = models.CharField(max_length=100)
-
+    def __str__(self):
+        return self.name
+    
     def send_payment_reminder(self):
         # Logic to send a payment reminder to the sponsor
         pass
